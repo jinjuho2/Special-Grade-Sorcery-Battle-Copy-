@@ -93,8 +93,8 @@ public class Enemy : MonoBehaviour, IDamageble
         if (health <= 0)
         {
             // 사망 처리
-            GameManager.instance.gold += 1;
             Destroy(gameObject);
+            GameManager.instance.gold += Random.Range(1, 4);
         }
     }
 }

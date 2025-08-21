@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public float defaultTime = 15;
     public int gold = 0;
 
-
     public TextMeshProUGUI timeTxt;
     public TextMeshProUGUI waveTxt;
     public TextMeshProUGUI goldTxt;
@@ -39,6 +38,7 @@ public class GameManager : MonoBehaviour
         timeTxt = GameObject.Find("UI/TimeTxt")?.GetComponent<TextMeshProUGUI>();
         waveTxt = GameObject.Find("UI/WaveInt")?.GetComponent<TextMeshProUGUI>();
         goldTxt = GameObject.Find("UI/CenterBackground/Gold").GetComponent<TextMeshProUGUI>();
+        gold = 30;
         time = defaultTime;
     }
 
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
             wave++;
             defaultTime += 1;
             time = defaultTime;
+            SpawnManager.instance.resetSpawnCoolTime -= 0.05f;
         }
 
         int minutes = Mathf.FloorToInt(time / 60f);  // 분
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
         waveTxt.text = wave.ToString("F0");
         timeTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         goldTxt.text = gold.ToString();
+
     }
 
 

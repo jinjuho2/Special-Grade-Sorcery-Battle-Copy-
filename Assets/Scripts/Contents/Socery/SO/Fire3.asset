@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a707c96d8da2bf140baa82923ae731f7, type: 3}
+  m_Name: Fire3
+  m_EditorClassIdentifier: 
+  spellName: "\uBD883"
+  damage: 100
+  cooldown: 1
+  origincooldown: 1
+  speed: 3
+  weight: 10
+  count: 0
+  spellPrefab: {fileID: 2298434316292053812, guid: c9459dc145ee15b4d9baeac8011fae55, type: 3}

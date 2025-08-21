@@ -10,6 +10,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] enemyPrefabs;
     public GameObject spawnTransfrom;
     public float spawnCoolTime = 0;
+    public float resetSpawnCoolTime = 0.3f;
     private void Awake()
     {
         if (instance == null)
@@ -30,7 +31,7 @@ public class SpawnManager : MonoBehaviour
         if (spawnCoolTime <= 0)
         {
             SpawnEnemy();
-            spawnCoolTime = 0.5f;
+            spawnCoolTime = resetSpawnCoolTime;
         }
     }
 
